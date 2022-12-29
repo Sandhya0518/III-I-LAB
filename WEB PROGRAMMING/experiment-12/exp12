@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <title> Addition of numbers</title>
+</head>
+<body>
+<form action="AddNumbers.jsp" method="get">
+<h2>Add Numbers</h2>
+ <label> First Number : </label> &nbsp;
+<input type="text" name="fnum"></input><br><br>
+ <label> Second Number : </label> &nbsp;
+<input type="text" name="snum"></input><br><br>
+ <label> Third Number : </label> &nbsp;
+<input type="text" name="tnum"></input><br><br>
+<input type="submit" value="Add Numbers"></input><br><br>
+</body>
+</form>
+</html>
+AddNumbers.jsp
+<%
+int num1 = Integer.parseInt(request.getParameter("fnum"));
+int num2 = Integer.parseInt(request.getParameter("snum"));
+int num3 = Integer.parseInt(request.getParameter("tnum"));
+int result = num1 + num2 + num3;
+out.print("First Number : "+num1+"<br>");
+out.print("Second Number : "+num2+"<br>");
+out.print("Third Number : "+num3+"<br>");
+out.print("<strong>Addition of Numbers :</strong> "+result);
+%>
